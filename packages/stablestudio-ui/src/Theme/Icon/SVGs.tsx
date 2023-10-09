@@ -340,8 +340,8 @@ export function Variation(props: Props) {
   ));
 }
 
-export function Google() {
-  return (
+export function Google(props: Props) {
+  return defaults(props)(({ width, height, color, ...props }) => (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       height="24"
@@ -366,7 +366,7 @@ export function Google() {
       />
       <path d="M1 1h22v22H1z" fill="none" />
     </svg>
-  );
+  ));
 }
 
 export function Dream(props: Props) {
