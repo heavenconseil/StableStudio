@@ -6,10 +6,7 @@ import { BottomBar } from "./BottomBar";
 import { Providers } from "./Providers";
 import { Sidebar, Sidebars } from "./Sidebar";
 import { TopBar } from "./TopBar";
-import {
-  GoogleOAuthProvider,
-  useGoogleLogin,
-} from "@react-oauth/google";
+import { GoogleOAuthProvider, useGoogleLogin } from "@react-oauth/google";
 import { Environment } from "~/Environment";
 
 interface GoogleLoginProps {
@@ -37,8 +34,22 @@ function MyGoogleLogin({ setIsLogin }: GoogleLoginProps) {
   });
 
   return (
-    <div className="absolute left-0 top-0 flex h-screen w-screen flex-col text-white sm:overflow-x-auto">
-      {showLogin && <button onClick={(event) => login()}>Login</button>}
+    <div className="absolute left-0 top-0 flex h-screen w-screen items-center justify-center text-white sm:overflow-x-auto">
+      {/* {showLogin && <button onClick={(event) => login()}>Login</button>} */}
+      {showLogin && (
+        <div>
+          <Theme.Logo.Next />
+          <br />
+          <Theme.Button
+            size="lg"
+            color={"zinc"}
+            icon={Theme.Icon.Google}
+            onClick={(event) => login()}
+          >
+            Login with Google
+          </Theme.Button>
+        </div>
+      )}
     </div>
   );
 }
@@ -66,7 +77,6 @@ export function App() {
       </div>
     );
   }
-
 
   return (
     <Providers>

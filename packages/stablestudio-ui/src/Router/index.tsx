@@ -42,10 +42,10 @@ export namespace Router {
               path: "/edit",
               element: <Editor />,
             },
-            {
-              path: "/settings",
-              element: <Settings />,
-            },
+            // {
+            //   path: "/settings",
+            //   element: <Settings />,
+            // },
             {
               path: "*",
               element: <ReactRouter.Navigate to={`/generate`} replace />,

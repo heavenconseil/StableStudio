@@ -22,7 +22,7 @@ export const Right = () => {
             <Shortcut.Keys keys={["Meta", "k"]} className="ml-2" />
           </Theme.Button>
         )}
-        <Link to="/settings">
+        {/* <Link to="/settings">
           <Theme.Button
             outline
             label="Settings"
@@ -30,7 +30,7 @@ export const Right = () => {
             className="aspect-square h-[30px] w-[30px]"
             icon={Theme.Icon.Settings}
           />
-        </Link>
+        </Link> */}
       </>
     </div>
   );

@@ -72,6 +72,7 @@ import {
   CGSociety,
   Discord,
   Dream,
+  Google,
   Generate,
   InfoIcon,
   Instagram,
@@ -166,6 +167,7 @@ export declare namespace Icon {
     Variation,
     Pencil,
     Dream,
+    Google,
     Upscale,
     Keyboard,
     ChevronsLeftRight,
@@ -259,6 +261,7 @@ export namespace Icon {
   Icon.Variation = makeComponent(Variation);
   Icon.Pencil = makeComponent(Pencil);
   Icon.Dream = makeComponent(Dream);
+  Icon.Google = makeComponent(Google);
   Icon.Upscale = makeComponent(Upscale);
   Icon.Keyboard = makeComponent(Keyboard);
   Icon.ChevronsLeftRight = makeComponent(ChevronsLeftRight);
