@@ -16,7 +16,7 @@
     "stablestudio-ui": "yarn workspace @stability/stablestudio-ui",
     "dev:use-example-plugin": "cross-env VITE_USE_EXAMPLE_PLUGIN=true yarn dev",
     "dev:use-webui-plugin": "cross-env VITE_USE_WEBUI_PLUGIN=true yarn dev",
-    "dev": "yarn workspaces foreach --all --interlaced --verbose --parallel --jobs unlimited run dev",
+    "dev": "yarn workspaces foreach --all --interlaced --verbose --parallel --jobs unlimited run dev --host",
     "build": "yarn workspaces foreach --all --interlaced --verbose --jobs unlimited run build",
     "clean": "yarn workspaces foreach --all --interlaced --verbose --parallel --jobs unlimited run clean && rimraf node_modules"
   },
@@ -32,5 +32,8 @@
       "prettier --write",
       "eslint --fix"
     ]
+  },
+  "dependencies": {
+    "google-auth-library": "^9.1.0"
   }
 }

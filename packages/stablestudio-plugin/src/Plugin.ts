@@ -30,6 +30,7 @@ type PluginCreateContext = {
 
   /** Get a random prompt for image generation */
   getStableDiffusionRandomPrompt: () => string;
+  getApiKey: () => string;
 };
 
 /** `PluginManifest` is used to describe your plugin on the settings page */

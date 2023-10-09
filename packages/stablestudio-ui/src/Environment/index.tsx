@@ -9,6 +9,8 @@ declare global {
     readonly VITE_GIT_HASH: string;
     readonly VITE_USE_EXAMPLE_PLUGIN: string;
     readonly VITE_USE_WEBUI_PLUGIN: string;
+    readonly VITE_GOOGLE_CLIENT_ID: string;
+    readonly VITE_API_KEY: string;
   }
 }
 
@@ -22,6 +24,8 @@ export namespace Environment {
     VITE_GIT_HASH: import.meta.env.VITE_GIT_HASH,
     VITE_USE_EXAMPLE_PLUGIN: import.meta.env.VITE_USE_EXAMPLE_PLUGIN ?? "false",
     VITE_USE_WEBUI_PLUGIN: import.meta.env.VITE_USE_WEBUI_PLUGIN ?? "false",
+    VITE_GOOGLE_CLIENT_ID: import.meta.env.VITE_GOOGLE_CLIENT_ID ?? "false",
+    VITE_API_KEY: import.meta.env.VITE_API_KEY ?? "false",
   } as const;
 
   export function get(name: VariableName): string {

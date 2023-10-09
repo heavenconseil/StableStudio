@@ -19,6 +19,7 @@
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
     "@react-hook/resize-observer": "^1.2.6",
+    "@react-oauth/google": "latest",
     "@reecelucas/react-use-hotkeys": "^2.0.0",
     "@stability/stablestudio-plugin": "workspace:^",
     "@stability/stablestudio-plugin-example": "workspace:^",

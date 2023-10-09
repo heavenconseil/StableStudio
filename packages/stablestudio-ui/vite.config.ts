@@ -20,6 +20,7 @@ export default defineConfig(({ mode }) => {
 
     server: {
       port: 3000,
+      cors: true,
       fs: { strict: false },
     },
 

@@ -51,6 +51,7 @@ export namespace Plugin {
 
         const plugin = pluginModule.createPlugin({
           getGitHash: () => Environment.get("GIT_HASH"),
+          getApiKey: () => Environment.get("API_KEY"),
           getStableDiffusionRandomPrompt: () =>
             Generation.Image.Prompt.Random.get(),
         });
@@ -123,6 +124,9 @@ namespace State {
     return {
       rootPlugin: createRootPlugin({
         getGitHash: () => Environment.get("GIT_HASH"),
+        getApiKey: () => {
+          return Environment.get("API_KEY");
+        },
         getStableDiffusionRandomPrompt: () =>
           Generation.Image.Prompt.Random.get(),
       }) as unknown as GlobalState.Store<StableStudio.Plugin>,

@@ -434,7 +434,8 @@ export const createPlugin = StableStudio.createPlugin<{
 
   return {
     ...functionsWhichNeedAPIKey(
-      localStorage.getItem("stability-apiKey") ?? undefined
+      // localStorage.getItem("stability-apiKey") ?? undefined
+      context.getApiKey() ?? undefined
     ),
 
     getStableDiffusionSamplers: () => [
@@ -552,7 +553,8 @@ export const createPlugin = StableStudio.createPlugin<{
         required: true,
         password: true,
 
-        value: localStorage.getItem("stability-apiKey") ?? "",
+        // value: localStorage.getItem("stability-apiKey") ?? "",
+        value: context.getApiKey() ?? "",
       },
     },
 
@@ -565,7 +567,7 @@ export const createPlugin = StableStudio.createPlugin<{
       }));
 
       if (key === "apiKey" && typeof value === "string") {
-        localStorage.setItem("stability-apiKey", value);
+        // localStorage.setItem("stability-apiKey", value);
         set((plugin) => ({ ...plugin, ...functionsWhichNeedAPIKey(value) }));
       }
     },
