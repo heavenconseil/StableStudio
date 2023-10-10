@@ -1,0 +1,12 @@
+{
+    "rewrites": [
+        {
+            "source": "/edit",
+            "destination": "/"
+        },
+        {
+            "source": "/generate",
+            "destination": "/"
+        }
+    ]
+}
