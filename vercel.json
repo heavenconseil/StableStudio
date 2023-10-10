@@ -2,11 +2,11 @@
     "rewrites": [
         {
             "source": "/edit",
-            "destination": "/"
+            "destination": "/index.html"
         },
         {
             "source": "/generate",
-            "destination": "/"
+            "destination": "/index.html"
         }
     ]
 }
